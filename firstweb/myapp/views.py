@@ -10,3 +10,13 @@ def home(request):
     context = {"all_post": all_post}
 
     return render(request, "myapp/home.html", context)
+
+
+def blog(request):
+    all_post = Post.objects.all()
+
+    context = {"all_post": all_post}
+
+    return render(request, "myapp/blog.html", context)
+    
+
